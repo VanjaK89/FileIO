@@ -1,0 +1,4 @@
+Product{productName='Chocolate', price=1.99, productCategory='sweets'}
+Product{productName='Rice', price=2.99, productCategory='corn'}
+Product{productName='juice', price=1.99, productCategory='drinks'}
+Product{productName='chicken', price=5.99, productCategory='meat'}
