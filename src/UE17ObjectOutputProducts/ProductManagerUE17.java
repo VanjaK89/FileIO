@@ -33,11 +33,11 @@ public class ProductManagerUE17 {
         }
     }
 
-    public void readFromFile(String path){
+    public void readFromFile(String path) throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(path);
+        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+        ArrayList<ProductUE17>prList = new ArrayList<>();
         try {
-            FileInputStream fileInputStream = new FileInputStream(path);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            ArrayList<ProductUE17>prList = new ArrayList<>();
             Object object;
             while((object = objectInputStream.readObject()) != null) {
                 ProductUE17 p = (ProductUE17) object;
@@ -46,12 +46,15 @@ public class ProductManagerUE17 {
 
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+
+        } catch (EOFException e) {
+            System.out.println("End of file reached");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            objectInputStream.close();
         }
+        System.out.println("final read");
+        System.out.println(prList);
     }
 }

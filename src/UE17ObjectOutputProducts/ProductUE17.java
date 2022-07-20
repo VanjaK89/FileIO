@@ -1,6 +1,8 @@
 package UE17ObjectOutputProducts;
 
-public class ProductUE17 {
+import java.io.Serializable;
+
+public class ProductUE17 implements Serializable {
     private String productName;
     private double price;
     private String productCategory;
@@ -11,4 +13,12 @@ public class ProductUE17 {
         this.productCategory = productCategory;
     }
 
+    @Override
+    public String toString() {
+        return "ProductUE17{" +
+                "productName='" + productName + '\'' +
+                ", price=" + price +
+                ", productCategory='" + productCategory + '\'' +
+                '}';
+    }
 }
