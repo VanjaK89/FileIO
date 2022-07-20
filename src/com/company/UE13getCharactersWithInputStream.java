@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.*;
 
-public class getCharactersWithInputStream {
+public class UE13getCharactersWithInputStream {
     public static void main(String[] args) {
 
         File file = new File("products.txt");

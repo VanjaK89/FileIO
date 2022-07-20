@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.*;
 
-public class BinaryInputStream {
+public class UE12BinaryInputStream {
     public static void main(String[] args) {
       File file = new File("products.txt");
         try {
