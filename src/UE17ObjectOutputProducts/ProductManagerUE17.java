@@ -16,7 +16,7 @@ public class ProductManagerUE17 {
     public void add(ProductUE17 p){
         productUE17s.add(p);
     }
-    public void save(String path){
+    public void saveToFile(String path){
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(path);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -29,6 +29,28 @@ public class ProductManagerUE17 {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readFromFile(String path){
+        try {
+            FileInputStream fileInputStream = new FileInputStream(path);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            ArrayList<ProductUE17>prList = new ArrayList<>();
+            Object object;
+            while((object = objectInputStream.readObject()) != null) {
+                ProductUE17 p = (ProductUE17) object;
+                prList.add(p);
+                System.out.println(p);
+
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
