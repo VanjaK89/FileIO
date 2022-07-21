@@ -15,7 +15,7 @@ public class ServerListenToSingleClient {
 
         try {
             System.out.println("Warte auf eingehende verbindung");
-            ServerSocket serverSocket = new ServerSocket(9090);
+            ServerSocket serverSocket = new ServerSocket(1111);
             Socket socket = serverSocket.accept();                //ich weisse ein serversocket die connesction zwischen server und user
             System.out.println("Client hat sich verbunden");
             //jemand hat sich verbundet, und wir möchten jemand begrüßen, wir müssen einen response hin schicken

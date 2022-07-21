@@ -13,16 +13,19 @@ public class AnotherClient {
             System.out.println("Server Antwort");
             System.out.println(bufferedReader.readLine());
             BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            Scanner sc = new Scanner(System.in);
-            String command = sc.next();
-            bufferedWriter.write(command);
+//            Scanner sc = new Scanner(System.in);
+//            String command = sc.next();
+            bufferedWriter.write("ping");
             bufferedWriter.newLine();
             bufferedWriter.flush();
             System.out.println(bufferedReader.readLine());
 
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
     }
 }

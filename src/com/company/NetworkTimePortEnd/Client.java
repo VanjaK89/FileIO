@@ -8,7 +8,7 @@ public class Client {
         public static void main(String[] args) {
 
             try {
-                Socket socket = new Socket("localhost", 9090);
+                Socket socket = new Socket("localhost", 1111);
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 System.out.println("Server Antwort");
                 System.out.println(bufferedReader.readLine());
