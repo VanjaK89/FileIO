@@ -1,9 +1,8 @@
-package com.company.NetzwerkBeispielPing;
+package com.company.NetzwerkBeispiel;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Random;
 
 public class Server {
     public static void main(String[] args) {

@@ -1,8 +1,7 @@
-package com.company.NetzwerkBeispielPing;
+package com.company.NetzwerkBeispiel;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Random;
 import java.util.Scanner;
 
 public class AnotherClient {
